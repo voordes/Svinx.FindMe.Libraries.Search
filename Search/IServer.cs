@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Svinx.FindMe.Libraries.Search
+﻿namespace Svinx.FindMe.Libraries.Search
 {
-    interface IServer
+    public interface IServer
     {
-        T GetRepository<T>() where T : IRepository;
+        void Start();
     }
 }

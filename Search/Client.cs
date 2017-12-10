@@ -1,23 +1,21 @@
-﻿using Svinx.Libraries.RabbitMQ;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Svinx.Libraries.Queues;
 
-namespace Svinx.FindMe.Libraries.SearchClient
+namespace Svinx.FindMe.Libraries.Search
 {
-    public class Client
+    public class Client: IClient
     {
-        public Client()
-        {
+        private IRPCClient _client;
 
+        public Client(IRPCClient client)
+        {
+            _client = client;
         }
 
         public dynamic Search(string query)
         {
-            var client = new RPCClient(ConfigurationManager.AppSettings["QueueUrl"]);
-            client.Start(ConfigurationManager.AppSettings["QueueName"]);
-            var response = client.Call<dynamic, dynamic>(new { Method = "Search", Query = query});
+            var response = _client.Call<dynamic, dynamic>(new { Method = "Search", Query = query });
             return response;
         }
+        
     }
 }

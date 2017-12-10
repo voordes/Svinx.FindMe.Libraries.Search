@@ -5,24 +5,22 @@
     <AssemblyName>Svinx.FindMe.Libraries.Search</AssemblyName>
     <RootNamespace>Svinx.FindMe.Libraries.Search</RootNamespace>
     <PackageId>Svinx.FindMe.Libraries.Search</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <Authors>Svinx (Sandor Voordes)</Authors>
     <Description>FindMe Search Library</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <Copyright>Copyright 2017 (c) Svinx. All rights reserved.</Copyright>
     <PackageTags>FindMe Search RabbitMQ</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Svinx.Libraries.RabbitMQ" Version="1.0.0" />
+    <PackageReference Include="Svinx.Libraries.Queues" Version="1.0.2" />
   </ItemGroup>
 
 <Target Name="CopyPackage" AfterTargets="Pack">
-    <Copy
-        SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"
-        DestinationFolder="c:\temp\packages\"
-        />
+    <Copy SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="c:\temp\packages\" />
 </Target>
 </Project>

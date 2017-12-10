@@ -1,9 +1,4 @@
-﻿using Svinx.Libraries.RabbitMQ;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Svinx.FindMe.Libraries.Search
+﻿namespace Svinx.FindMe.Libraries.Search
 {
     public class Server
     {
