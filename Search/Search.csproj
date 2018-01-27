@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Svinx.Libraries.Queues" Version="1.0.2" />
+    <PackageReference Include="Svinx.Libraries.Queues" Version="1.0.5" />
   </ItemGroup>
 
 <Target Name="CopyPackage" AfterTargets="Pack">

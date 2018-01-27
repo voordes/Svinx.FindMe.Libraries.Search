@@ -1,7 +1,10 @@
-﻿namespace Svinx.FindMe.Libraries.Search
+﻿using System;
+using System.Threading.Tasks;
+
+namespace Svinx.FindMe.Libraries.Search
 {
     public interface IServer
     {
-        void Start();
+        Task Start(Func<Query, Results> callback);
     }
 }

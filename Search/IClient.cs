@@ -1,9 +1,10 @@
 ﻿using Svinx.Libraries.Queues;
+using System.Threading.Tasks;
 
 namespace Svinx.FindMe.Libraries.Search
 {
     public interface IClient
     {
-        dynamic Search(string query);
+        Task<Results> Search(Query query);
     }
 }
